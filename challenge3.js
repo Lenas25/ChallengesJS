@@ -10,13 +10,8 @@
  *
  */
 
-function generateArray(number) {
-  return Array.from({ length: number }, (_, i) => i + 1);
-}
 
-generateArray(100).forEach((number) => {
-  isPrimo(number);
-});
+// Code from Lena
 
 function isPrimo(number) {
   if (number === 1) {
@@ -25,9 +20,39 @@ function isPrimo(number) {
   }
 
   let counter = 0;
-  generateArray(number).forEach((n) => {
-    if (number % n === 0) counter++;
-  });
+  for (let i = 1; i <= number; i++) {
+    if (number % i === 0) counter++;
+  }
 
   console.log(counter === 2 ? `${number} es primo` : `${number} no es primo`);
 }
+
+function primos(){
+  for (let i = 1; i <= 100; i++) {
+    isPrimo(i);
+  }
+}
+
+primos();
+
+// function generateArray(number) {
+//   return Array.from({ length: number }, (_, i) => i + 1);
+// }
+
+// generateArray(100).forEach((number) => {
+//   isPrimo(number);
+// });
+
+// function isPrimo(number) {
+//   if (number === 1) {
+//     console.log(`${number} es primo`);
+//     return;
+//   }
+
+//   let counter = 0;
+//   generateArray(number).forEach((n) => {
+//     if (number % n === 0) counter++;
+//   });
+
+//   console.log(counter === 2 ? `${number} es primo` : `${number} no es primo`);
+// }

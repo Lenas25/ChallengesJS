@@ -12,14 +12,25 @@
  *
  */
 
-function areaPoligono(type, base, hight) {
-  const res = {
-    triangulo: (base * hight) / 2,
-    cuadrado: base ** hight,
-    rectangulo: base * hight,
-  };
+// Code from Lena
 
-  return res[type];
+function areaPoligono(type, base, height) {
+  const poligono={
+    triangulo: (base * height) / 2,
+    cuadrado: (base === height) ? base * height : "No es un cuadrado, es un rectángulo.",
+    rectangulo: base * height,
+  }
+  return (type in poligono)? poligono[type]: "Polígono no soportado";
 }
 
-console.log(areaPoligono("triangulo", 2, 20));
+// function areaPoligono(type, base, hight) {
+//   const res = {
+//     triangulo: (base * hight) / 2,
+//     cuadrado: base ** hight,
+//     rectangulo: base * hight,
+//   };
+
+//   return res[type];
+// }
+
+console.log(areaPoligono("rombo", 2, 2));

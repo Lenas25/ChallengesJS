@@ -11,18 +11,29 @@
  *
  */
 
-let a = 0;
-let b = 1;
+// Code from Lena
 
-let counter = 0;
-
-while (counter <= 50) {
-  console.log(a);
-
-  let c = a + b;
-
-  a = b;
-  b = c;
-
-  counter++;
+let fib=[0,1];
+for(let i=2;i<=50;i++){
+  fib[i]=fib[i-1]+(fib[i-2]);
 }
+
+console.log(fib.join(", "));
+
+
+
+// let a = 0;
+// let b = 1;
+
+// let counter = 0;
+
+// while (counter <= 50) {
+//   console.log(a);
+
+//   let c = a + b;
+
+//   a = b;
+//   b = c;
+
+//   counter++;
+// }

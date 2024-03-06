@@ -12,19 +12,30 @@
  *
  */
 
-function sortWord(word) {
-  return word.toLowerCase().split("").sort().join("");
+// Code from lena
+
+function sort(word){
+  return word.toLowerCase().split('').sort().join('');
 }
 
-function isAnagram(word1, word2) {
-  if (word1.toLowerCase() === word2.toLowerCase()) {
-    return false;
-  }
-
-  return sortWord(word1) === sortWord(word2) ? true : false;
+function isAnagram(word1, word2){
+  return (word1.toLowerCase() === word2.toLowerCase()) ? false : (sort(word1) === sort(word2))? true: false;
 }
+
+
+// function sortWord(word) {
+//   return word.toLowerCase().split("").sort().join("");
+// }
+
+// function isAnagram(word1, word2) {
+//   if (word1.toLowerCase() === word2.toLowerCase()) {
+//     return false;
+//   }
+
+//   return sortWord(word1) === sortWord(word2) ? true : false;
+// }
 
 // true
-console.log(isAnagram("mora", "roma"));
-// false
+console.log(isAnagram("arma", "rama"));
+// falsen
 console.log(isAnagram("mxez", "roma"));

@@ -14,17 +14,26 @@
  *
  */
 
-Array.from({ length: 100 }, (_, i) => i + 1).forEach((number) => {
-  const multiplo3 = number % 3 === 0;
-  const multiplo5 = number % 5 === 0;
 
-  console.log(
-    multiplo3 && multiplo5
-      ? "fizzbuzz"
-      : multiplo3
-      ? "fizz"
-      : multiplo5
-      ? "buzz"
-      : number
-  );
-});
+
+// Code from lena
+
+for(let i=1; i<=100; i++){
+  console.log((i%3===0 && i%5===0) ? "fizzbuzz" : (i%3===0) ? "fizz" : (i%5===0) ? "buzz" : i);
+}
+
+
+// Array.from({ length: 100 }, (_, i) => i + 1).forEach((number) => {
+//   const multiplo3 = number % 3 === 0;
+//   const multiplo5 = number % 5 === 0;
+
+//   console.log(
+//     multiplo3 && multiplo5
+//       ? "fizzbuzz"
+//       : multiplo3
+//       ? "fizz"
+//       : multiplo5
+//       ? "buzz"
+//       : number
+//   );
+// });

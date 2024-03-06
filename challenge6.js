@@ -10,11 +10,25 @@
  * - Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
  */
 
-/**
- * @param {string} word
- */
-function reverseWord(word) {
-  return word.split("").reverse().join("");
+// Code from Lena
+
+function reverseWord(word){
+  const cadena = word.split("");
+  let newArr=[];
+
+  for(let i=cadena.length-1;i>=0;i--){
+    newArr.push(cadena[i]);
+  }
+
+  return newArr.join("");
 }
 
-console.log(reverseWord("Hola mundo"));
+
+// /**
+//  * @param {string} word
+//  */
+// function reverseWord(word) {
+//   return word.split("").reverse().join("");
+// }
+
+console.log(reverseWord("Hola Mundo"));

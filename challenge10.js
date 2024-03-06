@@ -24,9 +24,30 @@ Ten en cuenta que el árbol es un string y necesitas los saltos de línea \n par
  */
 
 function createXmasTree(height) {
-  if (height % 1 !== 0 || height > 100) return;
+  //Check if the heigth is negative and greater than 100
+  if(height<0 || height>100){
+    return "Invalid Height"; 
+  }
+
+  let result="";
+  let tree = "*";
+  let lines="-";
+
+  for (let i = 1; i <= height; i++) {
+    result+=lines.repeat(height-i)+tree.repeat(i*2-1)+lines.repeat(height-i)+"\n";
+  }
+  result+=(lines.repeat(height-1)+tree+lines.repeat(height-1)+"\n").repeat(2);
+// +tree.repeat(i*2-1)+lines.repeat(j)
+  return result;
+}
+
+
+console.log(createXmasTree(3));
+
+// function createXmasTree(height) {
+//   if (height % 1 !== 0 || height > 100) return;
 
     
 
-  return "";
-}
+//   return "";
+// }
